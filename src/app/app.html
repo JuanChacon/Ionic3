@@ -1,0 +1,15 @@
+<ion-menu [content]="nav">
+    <ion-toolbar>
+        <img src="../assets/icon/favicon.ico" width="40px;" height="30px;" alt="">
+        <ion-title>Menu</ion-title>
+    </ion-toolbar>
+    <ion-content style="margin-top: 70px;">
+
+        <ion-list>
+            <button (click)="goToPage(pag.component)" *ngFor="let pag of pages" ion-item menuClose><ion-icon item-left name="{{pag.icon}}"></ion-icon> {{pag.titulo}}</button>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #nav [root]="rootPage"></ion-nav>

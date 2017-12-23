@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle> <ion-icon name="menu"></ion-icon></button>
+        <ion-title>{{titulo}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h1 class="titulo">Probando Ionic 2</h1>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dignissimos nemo fugit voluptatibus, quibusdam voluptatem harum provident, libero voluptate ut laudantium sunt eum! Quos fugit facilis laboriosam nemo, eaque soluta.</p>
+    <ion-slides spaceBetween="10" pager>
+        <!-- spaceBetween="10": spacio entre slider, pager:paginacion  -->
+        <ion-slide>
+            <img id="img" src="../assets/imgs/angular-1.png" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img id="img" src="../assets/imgs/a2.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img id="img" src="../assets/imgs/rea.png" alt="">
+        </ion-slide>
+    </ion-slides>
+    <ion-grid>
+        <ion-row>
+            <button ion-col col-6 ion-button color="primary" icon-left large> 
+                <ion-icon  name="logo-facebook"></ion-icon> Facebook</button>
+            <button ion-col col-6 ion-button color="danger" icon-left large><ion-icon name="logo-youtube" ></ion-icon> Youtube</button>
+
+        </ion-row>
+    </ion-grid>
+</ion-content>

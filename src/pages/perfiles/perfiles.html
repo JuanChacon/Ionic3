@@ -1,0 +1,39 @@
+<!--
+  Generated template for the Perfiles page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <button ion-button menuToggle> <ion-icon name="menu"></ion-icon></button>
+
+        <ion-title>perfiles</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid fixed>
+        <ion-list ion-row>
+            <ion-header style="text-align:center; margin-top:10px;">
+                <h1>Usuarios de Deezer</h1>
+            </ion-header>
+            <ion-item ion-col col-12 col-sm-6 col-md-4 *ngFor="let users  of userss" style="margin-top:20px;">
+                <ion-card (click)="goToPlaylist(users)">
+                    <ion-card-header>
+                        <ion-avatar item-left>
+                            <img src="{{users.picture_small}}" alt="">
+                        </ion-avatar>
+                        <h2>{{users.name}}</h2>
+                    </ion-card-header>
+                    <ion-card-content>
+                        Mi musica
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+        </ion-list>
+    </ion-grid>
+</ion-content>

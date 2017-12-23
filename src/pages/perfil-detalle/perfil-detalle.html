@@ -1,0 +1,52 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>PerfilDetalle</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="close()">
+              <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card *ngIf="user">
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="{{user.picture_small}}">
+            </ion-avatar>
+            <p>{{user.name}}</p>
+            <p>{{user.country}}</p>
+        </ion-item>
+        <img src="{{user.picture_big}}" alt="">
+        <ion-card-content>
+            <p>Musica chida</p>
+        </ion-card-content>
+        <ion-grid>
+            <ion-row>
+                <button ion-col col-6 col-sm-4 col-md-4 ion-button icon-left clear text-center>
+                   <ion-icon name="musical-notes"></ion-icon>
+                   <div>
+                    Listas:{{playlist.length}}
+                   </div>
+                 </button>
+
+                <button ion-col col-6 col-sm-4 col-md-4 ion-button icon-left clear text-center>
+                   <ion-icon name="musical-note"></ion-icon>
+                   <div>
+                    Canciones:{{totalCanciones}}
+                   </div>
+                 </button>
+                <button ion-col col-12 col-sm-4 col-md-4 ion-button icon-left clear text-center>
+                   <ion-icon name="finger-print"></ion-icon>
+                   <div>
+                    id.Usuario: {{user.id}}
+                   </div>
+                 </button>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</ion-content>

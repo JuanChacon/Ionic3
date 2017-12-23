@@ -1,0 +1,14 @@
+<!-- Generated template for the Player component -->
+<ion-item>
+    <ion-thumbnail item-left>
+        <img src="{{cover}}">
+    </ion-thumbnail>
+    <h2>{{titulo}}</h2>
+    <span>Artista: {{artista}} Album: {{album}}</span>
+    <button ion-button clear large item-right (click)="togglePlay()" [disabled]="!ready">
+      <ion-icon name="ios-play" *ngIf = "playing == false"></ion-icon>
+      <ion-icon name="ios-pause" *ngIf = "playing == true"></ion-icon>
+    </button>
+    <progress value="{{audioPos}}" max="{{maxLenghtSong}}"></progress>
+    <!-- clear: no va a tener fondo -->
+</ion-item>

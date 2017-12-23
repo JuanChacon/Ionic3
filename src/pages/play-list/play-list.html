@@ -1,0 +1,22 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>playList</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="user" (click)="gotoProfile(user, playlists)">
+        <img src="{{user.picture}}" alt="" style="margin-left:130px;">
+    </div>
+    <ion-list ion-row>
+        <ion-item ion-col col-12 col-sm-6 col-md-4 *ngFor="let pls of playlists" (click)="goToCanciones(pls)">
+            <ion-thumbnail item-left>
+                <img src="{{pls.picture}}" alt="">
+            </ion-thumbnail>
+            <h2>{{pls.title}}</h2>
+            <p>{{pls.nb_tracks}} Canciones</p>
+        </ion-item>
+    </ion-list>

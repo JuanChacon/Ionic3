@@ -1,0 +1,19 @@
+player {
+    progress[value] {
+        // [value] = atributo
+        width: 100%;
+        display: block;
+        height: 5px;
+        border: none;
+        -webkit-appearance: none;
+        margin-top: 5px;
+        &::-webkit-progress-bar {
+            //&::pseudo elemento del progres bar
+            background-color: rgba(color($colors, primary), .5) //,.5 es el valor de la opacidad;
+        }
+        &::-webkit-progress-value {
+            transition: all .2s ease;
+            background-color: color($colors, primary);
+        }
+    }
+}
